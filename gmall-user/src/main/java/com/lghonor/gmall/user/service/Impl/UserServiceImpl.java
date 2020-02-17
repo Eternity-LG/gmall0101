@@ -1,10 +1,11 @@
 package com.lghonor.gmall.user.service.Impl;
 
-import com.lghonor.gmall.user.bean.UmsMember;
-import com.lghonor.gmall.user.bean.UmsMemberReceiveAddress;
+
+import com.lghonor.gmall.bean.UmsMember;
+import com.lghonor.gmall.bean.UmsMemberReceiveAddress;
+import com.lghonor.gmall.service.UserService;
 import com.lghonor.gmall.user.mapper.UmsMemberReceiveAddressMapper;
 import com.lghonor.gmall.user.mapper.UserMapper;
-import com.lghonor.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;

@@ -1,8 +1,9 @@
 package com.lghonor.gmall.user.controller;
 
-import com.lghonor.gmall.user.bean.UmsMember;
-import com.lghonor.gmall.user.bean.UmsMemberReceiveAddress;
-import com.lghonor.gmall.user.service.UserService;
+
+import com.lghonor.gmall.bean.UmsMember;
+import com.lghonor.gmall.bean.UmsMemberReceiveAddress;
+import com.lghonor.gmall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
