@@ -1,6 +1,10 @@
 package com.lghonor.gmall.manage.service.impl;
 
-import com.lghonor.gmall.bean.*;
+
+import com.lghonor.gmall.bean.PmsProductImage;
+import com.lghonor.gmall.bean.PmsProductInfo;
+import com.lghonor.gmall.bean.PmsProductSaleAttr;
+import com.lghonor.gmall.bean.PmsProductSaleAttrValue;
 import com.lghonor.gmall.manage.mapper.PmsProductImageMapper;
 import com.lghonor.gmall.manage.mapper.PmsProductInfoMapper;
 import com.lghonor.gmall.manage.mapper.PmsProductSaleAttrMapper;
@@ -24,6 +28,7 @@ public class SpuServiceImpl implements SpuService {
     @Autowired
     PmsProductSaleAttrValueMapper pmsProductSaleAttrValueMapper;
 
+    //spu清单列表
     @Override
     public List<PmsProductInfo> spuList(String catalog3Id) {
         PmsProductInfo pmsProductInfo = new PmsProductInfo();
@@ -31,7 +36,7 @@ public class SpuServiceImpl implements SpuService {
         List<PmsProductInfo> pmsProductInfos = pmsProductInfoMapper.select(pmsProductInfo);
         return pmsProductInfos;
     }
-
+        //spu存储信息
     @Override
     public String saveSpuInfo(PmsProductInfo pmsProductInfo) {
         String id = pmsProductInfo.getId();
@@ -97,6 +102,7 @@ public class SpuServiceImpl implements SpuService {
         return "success";
     }
 
+        //spu商品属性列表
     @Override
     public List<PmsProductSaleAttr> spuSaleAttrList(String spuId) {
         PmsProductSaleAttr pmsProductSaleAttr = new PmsProductSaleAttr();
