@@ -10,6 +10,19 @@ import java.io.Serializable;
  * @return
  */
 public class PmsBaseAttrValue implements Serializable {
+    @Id
+    @Column
+    private String id;
+    @Column
+    private String valueName;
+    @Column
+    private String attrId;
+    @Column
+    private String isEnabled;
+
+    @Transient
+    private String urlParam;
+
     public String getId() {
         return id;
     }
@@ -49,19 +62,4 @@ public class PmsBaseAttrValue implements Serializable {
     public void setUrlParam(String urlParam) {
         this.urlParam = urlParam;
     }
-
-    @Id
-    @Column
-    private String id;
-    @Column
-    private String valueName;
-    @Column
-    private String attrId;
-    @Column
-    private String isEnabled;
-
-    @Transient
-    private String urlParam;
-
-
 }

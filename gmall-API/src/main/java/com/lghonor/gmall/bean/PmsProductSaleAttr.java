@@ -1,5 +1,6 @@
 package com.lghonor.gmall.bean;
 
+import com.lghonor.gmall.bean.PmsProductSaleAttrValue;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
@@ -11,7 +12,7 @@ public class PmsProductSaleAttr implements Serializable {
 
     @Id
     @Column
-    String id;
+    String id ;
 
     @Column
     String productId;
@@ -58,12 +59,11 @@ public class PmsProductSaleAttr implements Serializable {
         this.saleAttrName = saleAttrName;
     }
 
-    public List<PmsProductSaleAttrValue> getspuSaleAttrValueList() {
+    public List<PmsProductSaleAttrValue> getSpuSaleAttrValueList() {
         return spuSaleAttrValueList;
     }
 
-    public void setspuSaleAttrValueList(List<PmsProductSaleAttrValue> spuSaleAttrValueList) {
+    public void setSpuSaleAttrValueList(List<PmsProductSaleAttrValue> spuSaleAttrValueList) {
         this.spuSaleAttrValueList = spuSaleAttrValueList;
     }
 }
-

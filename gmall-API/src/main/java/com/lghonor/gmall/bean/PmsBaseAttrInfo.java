@@ -1,5 +1,6 @@
 package com.lghonor.gmall.bean;
 
+import com.lghonor.gmall.bean.PmsBaseAttrValue;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,6 +11,19 @@ import java.util.List;
  * @return
  */
 public class PmsBaseAttrInfo implements Serializable {
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column
+    private String id;
+    @Column
+    private String attrName;
+    @Column
+    private String catalog3Id;
+    @Column
+    private String isEnabled;
+    @Transient
+    List<PmsBaseAttrValue> attrValueList;
 
     public String getId() {
         return id;
@@ -50,19 +64,4 @@ public class PmsBaseAttrInfo implements Serializable {
     public void setAttrValueList(List<PmsBaseAttrValue> attrValueList) {
         this.attrValueList = attrValueList;
     }
-
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    @Column
-    private String id;
-    @Column
-    private String attrName;
-    @Column
-    private String catalog3Id;
-    @Column
-    private String isEnabled;
-    @Transient
-    List<PmsBaseAttrValue> attrValueList;
-
-
 }

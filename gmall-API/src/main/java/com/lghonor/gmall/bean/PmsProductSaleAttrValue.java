@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class PmsProductSaleAttrValue implements Serializable {
     @Id
     @Column
-    String id;
+    String id ;
 
     @Column
     String productId;
@@ -30,7 +30,7 @@ public class PmsProductSaleAttrValue implements Serializable {
         this.id = id;
     }
 
-    public String getProductId(String id) {
+    public String getProductId() {
         return productId;
     }
 

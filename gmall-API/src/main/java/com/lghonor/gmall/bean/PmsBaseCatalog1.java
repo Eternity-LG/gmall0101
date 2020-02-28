@@ -1,5 +1,6 @@
 package com.lghonor.gmall.bean;
 
+import com.lghonor.gmall.bean.PmsBaseCatalog2;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,6 +17,8 @@ public class PmsBaseCatalog1 implements Serializable {
     private String id;
     @Column
     private String name;
+
+    @Transient
     private List<PmsBaseCatalog2> catalog2s;
 
     public List<PmsBaseCatalog2> getCatalog2s() {
@@ -25,8 +28,6 @@ public class PmsBaseCatalog1 implements Serializable {
     public void setCatalog2s(List<PmsBaseCatalog2> catalog2s) {
         this.catalog2s = catalog2s;
     }
-
-    @Transient
 
     public String getId() {
         return id;

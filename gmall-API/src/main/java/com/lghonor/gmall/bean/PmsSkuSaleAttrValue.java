@@ -29,7 +29,7 @@ public class PmsSkuSaleAttrValue implements Serializable {
     @Column
     String saleAttrValueName;
 
-    public String getId(String skuId) {
+    public String getId() {
         return id;
     }
 

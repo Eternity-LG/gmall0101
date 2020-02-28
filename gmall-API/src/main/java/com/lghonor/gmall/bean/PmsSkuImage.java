@@ -10,7 +10,6 @@ import java.io.Serializable;
  */
 public class PmsSkuImage implements Serializable {
 
-
     @Id
     @Column
     String id;
@@ -20,15 +19,6 @@ public class PmsSkuImage implements Serializable {
     String imgName;
     @Column
     String imgUrl;
-
-    public String getSpuImgId() {
-        return spuImgId;
-    }
-
-    public void setSpuImgId(String spuImgId) {
-        this.spuImgId = spuImgId;
-    }
-
     @Column
     String spuImgId;
     @Column
@@ -42,7 +32,7 @@ public class PmsSkuImage implements Serializable {
         this.id = id;
     }
 
-    public String getSkuId(String id) {
+    public String getSkuId() {
         return skuId;
     }
 
@@ -66,6 +56,14 @@ public class PmsSkuImage implements Serializable {
         this.imgUrl = imgUrl;
     }
 
+    public String getSpuImgId() {
+        return spuImgId;
+    }
+
+    public void setSpuImgId(String spuImgId) {
+        this.spuImgId = spuImgId;
+    }
+
     public String getIsDefault() {
         return isDefault;
     }
@@ -73,6 +71,4 @@ public class PmsSkuImage implements Serializable {
     public void setIsDefault(String isDefault) {
         this.isDefault = isDefault;
     }
-
-
 }
